@@ -151,7 +151,7 @@ class PostController extends Controller
     {
         $post = Post::find($id);
         if($post) {
-            $post->tags()->sync([]);
+            // $post->tags()->sync([]);
             $post->delete();
             return redirect()->route('admin.posts.index');
         } else {
